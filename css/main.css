@@ -96,41 +96,58 @@ textarea {
    ========================================================================== */
 
 html {
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 0 2em;
-  font-size: 1.25em;
-  height: 100%;
-  color: #fff;
+    font-family: 'Sigmar', cursive;
+    padding: 0 2em;
+    font-size: 1.25em;
+    height: 100%;
+    color: #fff;
+}
+
+header {
+    font-size: 2em;
+    border: 5px double black;
+}
+
+footer {
+    text-decoration: underline;
+    color: aqua;
 }
 
 header,
 footer {
-  background-color: #222;
-  height: 80px;
-  width: 100%;
+    background-color: #554646;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px double black;
+
 }
 
 main {
-  background-color: #ccc;
-  height: 250px;
-  width: 100%;
+    background-color: #554646;
+    height: 90px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+span.color {
+    color: rgb(224, 230, 124);
 }
 
 header,
 footer,
-main { display: flex;
-    justify-content: center;
-    align-items: center;
+main {}
 
-}
-
-.flex-container {display: flex;
+.flex-container {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
@@ -139,15 +156,47 @@ main { display: flex;
 }
 
 .flex-items {
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  width: 30%;
-  height: 200px;
-  display: flex;
+    color: #fff;
+    line-height: 1.5em;
+    font-size: 1.6em;
+    background-color: #554646;
+    width: 30%;
+    height: 400px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    align-content: stretch;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 5px double #000;
+
+}
+
+#intro {
+    border: 5px double black;
+    background-color: #554646;
+    margin-top: 10px;
+}
+
+#div-1 {}
+
+#div-2 {}
+
+
+#div-3 {
+    background-color: #554646;
+    background-image: url(https://media.istockphoto.com/id/1326116807/photo/young-girl-with-vintage-bicycle-at-sunset.jpg?b=1&s=170667a&w=0&k=20&c=-pVj6EvJTHgFel9riIZO2wZfC3RouoRi_wjDamdKEJQ=);
+    background-repeat: no-repeat;
+    background-size: 225%;
+
+}
+
+.divtext {
+    font-size: 12px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
 }
 
 /* ==========================================================================
@@ -216,8 +265,10 @@ main { display: flex;
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -232,20 +283,21 @@ main { display: flex;
 
 /* If you'd like to try a different layout on Desktop and larger screens: */
 @media (min-width: 1200px) {
-  #div-1,
-  #div-2{
-      /* set your flex value to 1 50% */
-  }
 
-  #div-3 {
-    /* set your flex value to 1 100% */
-  }
+    #div-1,
+    #div-2 {
+        /* set your flex value to 1 50% */
+    }
+
+    #div-3 {
+        /* set your flex value to 1 100% */
+    }
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -256,11 +308,13 @@ main { display: flex;
    ========================================================================== */
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
